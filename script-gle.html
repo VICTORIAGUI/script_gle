@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="utf-8">
+
+<script>
+
+// Tentei abrir em um arquivo JavaScript externo e deu erro, então coloquei dentro de arquivo HTML.
+
+/*
+funcition - Uma função é um bloco (agrupamento de declarações) definido para executar um conjunto de instruções para realizar uma tarefa ou calcular um valor. 
+
+pulalinha - Nome que a função (function) recebeu.
+
+document.write - Uma função que escreve no HTML da página. Quando se escreve uma coisa dentro da página para que seja exbida ao usuário.
+
+Função declarada para exibir duas linhas puladas tela.
+*/
+
+function pulalinha() {
+ document.write("<br>");
+ document.write("<br>");
+}
+
+// Um bloco de declarações para exibir ao usuário uma frase seguida de uma linha pulada.
+
+function mostra(frase) {
+    document.write(frase);
+    pulalinha();
+}
+
+/* Fazendo uso das váriaveis nome, alturaInformada e pesoInformado para receber e calcular os valores solicitados.
+Se não me engano o uso de var é obsoleto. E poderia ser substituido por ler.
+*/
+
+function calculaImc(altura, peso) {
+    return peso / (altura * altura);
+}
+
+// Variavéis declaradas para receberem um valor.
+var nome = prompt("Qual é o seu nome?");
+var alturaInformada = prompt("Informe sua altura");
+var pesoInformado = prompt("Informe seu peso");
+
+// Variavél declarada para recebeber os valores pedidos e os cálcular.
+var imc = calculaImc(alturaInformada, pesoInformado);
+
+//Impressão com o resultado do cálculo. Sendo exibido o valor da variável nome e o valor do calculo na variável imc
+document.write(nome + " O seu IMC é " + imc);
+
+</script>
+</body>
+</html>
